@@ -30,3 +30,6 @@ override.tf.json
 
 # terraform lock
 .terraform*
+
+# key file
+key_pair.tf
