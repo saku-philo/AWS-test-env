@@ -6,7 +6,7 @@ resource "aws_instance" "jenkins" {
   ami                  = "ami-0c3fd0f5d33134a76"
   instance_type        = "t3.micro"
   subnet_id            = aws_subnet.public_0.id
-  # user_data            = file("./user_data.sh")
+  user_data            = file("./user_data.sh")
   vpc_security_group_ids = [
     module.ec2-sg.security_group_id,
     module.ec2-ssh-sg.security_group_id
